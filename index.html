@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <!--Import Google Icon Font-->
-  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-  <!-- Compiled and minified CSS -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
-  <link rel="stylesheet" href="styles.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Threejs Project</title>
-</head>
-<body>
-  <div class="title-bar">
-    <ul>
-      <li>
-        <p>Toggle Lights</p>
-        <div class="slideThree">
-          <input type="checkbox" value="None" id="lightToggle" name="check" checked />
-          <label for="lightToggle"></label>
-        </div>
-      </li>
-      <li>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Threejs Project</title>
+  </head>
+  <body>
+    <div class="title-bar">
+      <ul>
+        <li>
+          <p>Toggle Lights</p>
+          <div class="slideThree">
+            <input type="checkbox" value="None" id="lightToggle" checked />
+            <label for="lightToggle"></label>
+          </div>
+        </li>
+        <li>
+          <p>Toggle Ambient Light</p>
+          <div class="slideThree">
+            <input type="checkbox" value="None" id="ambientToggle" />
+            <label for="ambientToggle"></label>
+          </div>
+        </li>
+        <li>
           <p>Toggle Shape</p>
           <div class="slideThree">
-            <input type="checkbox" value="None" id="shapeToggle" name="check" checked />
+            <input type="checkbox" value="None" id="shapeToggle" />
             <label for="shapeToggle"></label>
           </div>
         </li>
-    </ul>
-  </div>
-  <canvas id="myCanvas"></canvas>
-  <!-- Compiled and minified JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js"></script>
-  <script type="module" src="js/project.js"></script>
-
-</body>
+      </ul>
+    </div>
+    <canvas id="myCanvas"></canvas>
+    <!-- Compiled and minified JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js"
+    ></script>
+    <script type="text/javascript" src="project.js"></script>
+  </body>
 </html>
