@@ -6,6 +6,7 @@ let whiteLight, redLight, blueLight, hemiLight
 const lightToggle = document.getElementById('lightToggle')
 const shapeToggle = document.getElementById('shapeToggle')
 const ambientToggle = document.getElementById('ambientToggle')
+const scaleToggle = document.getElementById('scaleToggle')
 
 // Models
 const boxModel = (l, w, h, givenColor) => {
@@ -282,23 +283,24 @@ function render() {
   hemiLight.rotation.z += 0.04
   hemiLight.rotation.y += 0.04
 
-  if (!lightToggle.checked) {
+  // Animation Toggles
+  if (!lightToggle.checked)
     scene.remove(whiteLight, redLight, blueLight, hemiLight)
-  } else {
+  else
     scene.add(whiteLight, redLight, blueLight, hemiLight)
-  }
 
-  if (!ambientToggle.checked) {
+  if (!ambientToggle.checked)
     scene.remove(blueLight)
-  } else {
+  else
     scene.add(blueLight)
-  }
 
-  if (shapeToggle.checked) {
+  if (shapeToggle.checked)
     pivotPoint5.add(sphere3)
-  } else {
+  else
     pivotPoint5.remove(sphere3)
-  }
 
-
+  if (scaleToggle.checked)
+    octahedron.scale.set(8, 8, 8)
+  else
+    octahedron.scale.set(1, 1, 1)
 }
